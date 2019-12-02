@@ -1,0 +1,8 @@
+.#{$namespace}-checkbox-group {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  .#{$namespace}-checkbox:nth-child(n)  {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,108 @@
+.#{$namespace}-select {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  @extend .common-root;
+
+  &.disable {
+    @extend .disabled;
+  }
+
+  min-width: map-get($element_scales, select-min-width);
+  min-height: map-get($element_scales, select-min-height);
+
+  > .select {
+    width: inherit;
+    position: relative;
+    height: map-get($element_scales, box-min-height);
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+
+    color: map-get($element_colors, basic-label-color);
+    background-color: map-get($element_colors, basic-bg-color);
+
+    cursor: pointer;
+    user-select: none;
+    list-style-type: none;
+    font-size: map-get($element_scales, font-min-size);
+
+    &:hover {
+      @extend .hover;
+    }
+
+    &.arrow {
+      &:after {
+        position: absolute;
+        content: "";
+        top: 10px;
+        right: 5px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+    }
+  }
+
+  > .container {
+    width: inherit;
+    height: inherit;
+
+    overflow-y: auto;
+
+    // 초기화
+    > ul {
+      margin: 0px;
+
+      > li {
+        margin: 0px;
+      }
+    }
+
+    > .options {
+      position: relative;
+      left: 0;
+      right: 0;
+      z-index: 99;
+
+      > .option {
+        padding: 2px 5px 2px 5px;
+        list-style-type: none;
+        color: map-get($element_colors, input-label-color);
+        background-color:  map-get($element_colors, input-bg-color);
+
+        text-overflow: ellipsis;
+
+        &.arrow {
+          position: relative;
+          &.selected {
+            &:after {
+              position: absolute;
+              content: "";
+              float: right;
+              top: 10px;
+              right: 5px;
+              width: 0;
+              height: 0;
+              border: 6px solid transparent;
+              border-color: red transparent transparent transparent;
+            }
+          }
+        }
+
+        &:hover {
+          color: map-get($element_colors, hover-label-color);
+          background-color: map-get($element_colors, hover-bg-color);
+        }
+      }
+
+      > .divider {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-width: 0.5px;
+        color: map-get($element_colors, divider-color);
+      }
+    }
+  }
+}

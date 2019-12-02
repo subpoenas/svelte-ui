@@ -1,0 +1,71 @@
+.#{$namespace}-accordion {
+    // 블럭 타입
+    display: flex;
+    flex-direction: column;
+    
+    &:focus {
+    }
+
+    &:hover {
+    }
+    
+    &.disable {
+      @extend .disabled
+    }
+
+    // child
+    .container {
+      .button {
+        background-color: lightblue;
+        color: white;
+        cursor: pointer;
+        width: 30%;        
+        padding: 15px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+  
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit; 
+        border-bottom-left-radius: inherit; 
+        border-bottom-right-radius: inherit;   
+  
+        &:hover {
+          background-color: rgb(0, 180, 255);
+          color: lightblue;
+        }
+  
+        &.active {
+          background-color: darkblue;
+          color: lightblue;
+        }
+  
+        &.active:after {
+         content: '-'; /* Unicode character for "minus" sign (-) */
+         color: lightblue;
+        }   
+      }
+  
+      .button:after {
+        content: '+'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: darkblue;
+        float: right;
+        margin-left: 5px;
+      }  
+  
+      .panel {
+        padding: 0 15px;
+        background-color: white;
+        overflow: hidden;
+        display: block;
+        transition: max-height 0.2s ease-out;        
+  
+          &.hidden {
+            display: none;
+          }
+      }
+    }
+}

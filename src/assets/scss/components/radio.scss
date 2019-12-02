@@ -1,0 +1,42 @@
+.#{$namespace}-radio {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  &.disable {
+    @extend .disabled;
+  }
+
+  margin: 1px 0px;
+
+  // child
+  > .container {
+    @extend .common-container;
+
+    .unmark {
+      @extend .common-mark;
+
+      &:hover {
+        @extend .hover;
+      }
+    }
+
+    > .mark {  
+      position: relative;
+      @extend .common-unmark;
+
+      > .check {
+        position: absolute;
+        width: 13px;
+        height: 13px;        
+        top: 6px;
+        left: 6px;
+        background: map-get($element_colors, mark-label-color);
+        border-radius: 50%;
+      }      
+    }
+
+    > .label {
+      @extend .common-label;
+    }
+  }
+}

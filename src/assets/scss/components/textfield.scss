@@ -1,0 +1,42 @@
+.#{$namespace}-textfield {
+  // 인라인 타입
+  display: inline-block;
+
+  @if $MOBILE == true {
+    width: 100%;
+  }@else {
+    width: inherit;
+  }
+  height: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition-duration: 0.4s;
+
+  &:focus {
+   @extend .focus
+  }
+
+  &:hover {
+  }
+
+  &.active {
+    background-color: darkblue;
+    color: lightblue;
+  }
+
+  &.disable {
+    @extend .disabled
+  }
+     
+  .label {
+    font-size: 24px;
+    padding-left: .5em;
+    height: inherit;
+  }
+  .error {
+    text-align: right;
+    color: red;
+  }
+}

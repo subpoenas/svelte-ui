@@ -1,0 +1,40 @@
+.#{$namespace}-spinner {
+  // 블럭 타입
+
+  @extend .common-root;
+
+  &.disable {
+    @extend .disabled;
+  }
+
+  > .container {
+    width: inherit;
+    height: inherit;
+
+    min-width: map-get($element_scales, middle-min-width);
+    min-height: map-get($element_scales, middle-min-height);
+
+    display: inline-flex;
+
+    > .input {
+      width: 80%;
+      height: inherit;
+      min-width: map-get($element_scales, input-min-width);
+      min-height: map-get($element_scales, input-min-height);
+
+      color: map-get($element_colors, input-label-color);
+      background-color: map-get($element_colors, input-bg-color);
+
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: map-get($element_scales, font-min-size);
+      text-align: center;
+      text-decoration: none;
+      border-style: solid;
+      border-width: 1px;
+      border-color: grey;
+      transition-duration: 0.2s;
+      vertical-align: center;
+    }
+  }
+}

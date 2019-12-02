@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+@import "./settings.scss";
+@import "./utils/variables.scss";
+
+/*
+  제작: 정재윤
+  날짜: 2019/01/24
+
+  기본 기능 제공
+    - 시멘틱 컬러 제공
+*/
+.is-primary {
+  color: map-get($semantic_colors, primary);
+  background: map-get($semantic_bgcolors, primary);
+}
+.is-success {
+  color: map-get($semantic_colors, success);
+  background: map-get($semantic_bgcolors, success);
+}
+.is-warning {
+  color: map-get($semantic_colors, warning);
+  background: map-get($semantic_bgcolors, warning);
+}
+.is-danger {
+  color: map-get($semantic_colors, danger);
+  background: map-get($semantic_bgcolors, danger);
+}
+.is-info {
+  color: map-get($semantic_colors, info);
+  background: map-get($semantic_bgcolors, info);
+}
+.is-dark {
+  color: map-get($semantic_colors, dark);
+  background: map-get($semantic_bgcolors, dark);
+}
+.is-white {
+  color: map-get($semantic_colors, white);
+  background: map-get($semantic_bgcolors, white);
+}
+.focus {
+  cursor: pointer;
+  opacity: map-get($opacity, focus);
+}
+.hover {
+  color: map-get($element_colors, hover-label-color);
+  background-color: map-get($element_colors, hover-bg-color);
+}
+.common-box {
+  min-width: map-get($element_scales, small-min-width);
+  min-height: map-get($element_scales, small-min-height);
+
+  color: map-get($element_colors, basic-label-color);
+  background-color: map-get($element_colors, basic-bg-color);
+
+  font-size: map-get($element_scales, font-min-size);
+
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+
+  margin: 1px 0px;
+
+  // shadow
+  box-shadow: 1px 1px #999;
+}
+.common-root {
+  margin: 1px 0px;
+}
+.common-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: inherit;
+  height: inherit;
+}
+.common-mark {
+  min-width: map-get($element_scales, box-min-width);
+  min-height: map-get($element_scales, box-min-height);
+
+  color: map-get($element_colors, basic-label-color);
+  background-color: map-get($element_colors, basic-bg-color);
+
+  font-size: map-get($element_scales, font-min-size);
+
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+
+  // shadow
+  box-shadow: 1px 1px #999;
+}
+.common-unmark {
+  min-width: map-get($element_scales, box-min-width);
+  min-height: map-get($element_scales, box-min-height);
+
+  color: map-get($element_colors, mark-label-color);
+  background-color: map-get($element_colors, mark-bg-color);
+
+  font-size: map-get($element_scales, font-min-size);
+
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+
+  // shadow
+  box-shadow: 1px 1px #999;
+}
+.common-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;   
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+}
+.common-label {
+  font-size: map-get($element_scales, font-min-size);
+  color: map-get($element_colors, basic-label-color);
+  margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.common-elipsis-label {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+  color: map-get($element_colors, mark-label-color);
+  background-color: map-get($element_colors, mark-bg-color);
+  opacity: map-get($opacity, disable);
+}
+.fill-document {
+  width: 100% !important;
+}
+.fill-parent {
+  width: inherit !important;
+}
+.fill-content {
+}
+.display-block {
+  display: block !important;
+}
+.display-inline {
+  display: inline-block !important;
+}
+.box-shadow {
+  box-shadow: 0 3px 3px grey;
+}
+.border-item-square {
+  border-radius: 0px !important;
+}
+.border-item-circle {
+  border-radius: 50% !important;
+}
+.border-item-round {
+  border-radius: 5px !important;
+}
+.border-item-round-up {
+  border-top-right-radius: 20px !important;
+}
+.border-item-round-down {
+  border-bottom-right-radius: 20px !important;
+}
+.align-center {
+  text-align: center !important;
+}
+.align-left {
+  text-align: left !important;
+}
+.align-right {
+  text-align: right !important;
+}
+.display-none {
+  display: none !important;
+}
+.padding-small-height {
+  margin: 5px 0px !important;
+}
+.padding-middle-height {
+  margin: 10px 0px !important;
+}
+.padding-large-height {
+  margin: 15px 0px !important;
+}
+.padding-small {
+  margin: 2px 5px !important;
+}
+.padding-middle {
+  margin: 5px 10px !important;
+}
+.padding-large {
+  margin: 10px 15px !important;
+}

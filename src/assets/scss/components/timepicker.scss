@@ -1,0 +1,35 @@
+.#{$namespace}-timepicker {
+    // 인라인 타입
+    display: inline-flex;
+    user-select: none;
+    align-items: center;
+    width: 200px;
+
+    &:focus {
+      @extend .focus
+    }
+    &:hover {
+        input ~ .mark {
+          background-color: rgb(0, 180, 255);
+        }
+    }
+    &.disable {
+      @extend .disabled
+    }
+
+    /* scroll bar */
+    /* width */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: lightblue; 
+    }
+}

@@ -1,0 +1,39 @@
+.#{$namespace}-label {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  @extend .common-root;
+
+  &.disable {
+    @extend .disabled;
+  }
+
+  > .label {
+    @extend .common-elipsis-label;
+  }
+  
+  &.tooltip {
+    position: relative;
+    display: inline-block;
+
+    &:hover {     
+     .tooltiptext {
+        visibility: visible;
+      }
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: max-content;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 2px;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }  
+  }
+}

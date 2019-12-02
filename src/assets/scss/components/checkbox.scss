@@ -1,0 +1,49 @@
+.#{$namespace}-checkbox {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  @extend .common-root;
+  
+  &.disable {
+    @extend .disabled;
+  }
+  
+  // child
+  > .container {
+    @extend .common-container;
+
+    > .unmark {      
+      @extend .common-mark;
+
+      &:hover {
+        @extend .hover;
+      }
+    }
+
+    > .mark {
+      position: relative;
+      @extend .common-unmark;
+
+      > .check {
+        position: absolute;
+        width: 5px;
+        height: 10px;        
+        top: 5px;
+        left: 10px;
+        border: solid map-get($element_colors, mark-label-color);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    > .label {
+      @extend .common-label;
+    }
+
+    // > .margin-left {
+    //   margin-left: 10px;
+    // }
+  }
+}

@@ -1,0 +1,46 @@
+.#{$namespace}-tag {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  @extend .common-root;
+  @extend .common-box;
+  
+  &.disable {
+    @extend .disabled;
+  }
+
+  > .container {
+    @extend .common-container;
+
+    > .cancel {
+      width: map-get($element_scales, box-min-width);
+      height: map-get($element_scales, box-min-height);
+
+      color: map-get($element_colors, mark-label-color);
+      background-color: map-get($element_colors, mark-bg-color);
+
+      // shadow
+      box-shadow: 1px 1px #999;
+      
+      margin: 5px;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        @extend .hover;
+      }
+      &:active { // 버튼 클릭 시 효과 처리
+        opacity: 0.5;
+        transform: translateY(1px);
+        transition-duration: 0.2s;
+      }        
+    }
+
+    > .label {
+      @extend .common-label;
+    }
+  }
+}

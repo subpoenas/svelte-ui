@@ -1,0 +1,31 @@
+.#{$namespace}-button {
+  // 수평타입(기본)
+  // display: inline-block;
+  
+  @extend .common-root;
+  @extend .common-box;
+
+  &.disable {
+    @extend .disabled;
+  }
+  &:hover {
+    @extend .hover;
+  }
+  &:active {
+    // 버튼 클릭 시 효과 처리
+    opacity: 0.5;
+    transform: translateY(1px);
+    transition-duration: 0.2s;
+  }
+  &.mark {
+    // color
+    color: map-get($element_colors, mark-label-color);
+    background-color: map-get($element_colors, mark-bg-color);
+  }
+
+  // child
+  > .label {
+    // color
+    @extend .common-label;
+  }
+}

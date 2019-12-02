@@ -1,0 +1,27 @@
+.#{$namespace}-tooltip {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  @extend .common-root;
+
+  &.disable {
+    @extend .disabled;
+  }
+
+
+  position: relative;
+  display: inline-block;
+
+  > .tooltiptext {
+    width: max-content;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 2px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+}

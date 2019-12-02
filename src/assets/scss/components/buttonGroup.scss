@@ -1,0 +1,33 @@
+.#{$namespace}-button-group {
+  // 수평타입(기본)
+  // display: inline-block;
+  
+  .border-item-square-in-group {
+    &:first-child {
+    }
+    &:last-child {
+    }
+  }
+
+  .inline-border-item-round-in-group {
+    &:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    &:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .block-border-item-round-in-group {
+    &:first-child {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}

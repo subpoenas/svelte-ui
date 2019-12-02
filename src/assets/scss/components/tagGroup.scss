@@ -1,0 +1,21 @@
+.#{$namespace}-tag-group {
+  // 수평타입(기본)
+  // display: inline-block;
+
+  // 수직타입
+  &.group-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .#{$namespace}-tag:nth-child(n) {
+    margin-right: 30px;
+  }
+
+  > .empty{
+    color: grey;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+}

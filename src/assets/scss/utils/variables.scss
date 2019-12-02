@@ -1,0 +1,79 @@
+$speed-slow: 150ms !default;
+$speed-slower: 250ms !default;
+
+$max-zIndex: 10000;
+
+$easing: 'ease';
+
+$primary: #7957d5 !default;
+$primary-invert: #ffffff !default;
+
+$info: #167df0 !default;
+
+$link: $primary !default;
+$link-invert: $primary-invert !default;
+$link-visited: #aaaaaa !default;
+$link-focus-border: $primary !default;
+
+// 고정컬러 
+$semantic_colors: (
+  danger:   #e5f3ff,  // 알림,에러,미진행 아이콘등 상태를 표현하는 컬러
+  primary:  #e5f3ff,  // 주요 콘텐츠를 표현하는 컬러
+  info:     #e5f3ff,  // 정보 처리
+  success:  #e5f3ff,  // 성공 처리
+  warning:  #e5f3ff,  // 경고 처리
+  alert:    #363636,  // 알림 처리
+  dark:     #e5f3ff,  // 알림 처리
+  white:    #030303,  // 알림 처리
+  disable:  #030303   // 불능 처리
+);
+
+$semantic_bgcolors: (
+  danger:   #ff4141,  // 알림,에러,미진행 아이콘등 상태를 표현하는 컬러
+  primary:  #007fff,  // 주요 콘텐츠를 표현하는 컬러
+  info:     #007fff,  // 정보 처리
+  success:  #23d160,  // 성공 처리
+  warning:  #ffdd57,  // 경고 처리
+  alert:    #e5f3ff,  // 알림 처리
+  dark:     #363636,  // 알림 처리
+  white:    #e5f3ff,  // 알림 처리
+  disable:  #cccccc   // 불능 처리
+);
+
+$opacity: (
+  focus:   1.0,
+  normal:  0.8,
+  disable: 0.5
+);
+
+$element_colors: (
+  basic-bg-color: rgb(220, 220, 220),
+  basic-label-color: #363636,
+  input-bg-color: rgb(255, 255, 255),
+  input-label-color: #363636,
+  hover-bg-color: rgb(0, 180, 255),
+  hover-label-color: rgb(255, 255, 255),
+  mark-bg-color:  #363636,
+  mark-label-color: rgb(255, 255, 255),
+  divider-color: rgba(240, 240, 240, 50)
+);
+
+$element_scales: (
+  small-min-width: 50px,
+  small-min-height: 30px, 
+  middle-min-width: 100px,
+  middle-min-height: 30px,   
+  large-min-width: 150px,
+  large-min-height: 30px,   
+  basic-min-width: 30px,
+  basic-min-height: 30px,   
+  box-min-width: 25px,
+  box-min-height: 25px,  
+  input-min-width: 50px,
+  input-min-height: 30px, 
+  list-min-width: 150px,
+  list-min-height: 100px,   
+  select-min-width: 100px,
+  select-min-height: 100px,     
+  font-min-size: 18px  
+);
